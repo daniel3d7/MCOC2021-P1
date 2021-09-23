@@ -128,6 +128,4 @@ class Reticulado(object):
 
 
     def __str__(self):
-        
       
-   
