@@ -13,6 +13,7 @@ class Reticulado(object):
         
         self.xyz = np.zeros((Reticulado.__NNodosInit__,3), dtype=np.double)
         self.Nnodos = 0
+        self.Ndimensiones = 3
         self.barras = []
         self.cargas = {}
         self.restricciones = {}
@@ -77,67 +78,26 @@ class Reticulado(object):
     
     
     def agregar_restriccion(self, nodo, gdl, valor=0.0):
+
         
-        
-        if nodo in self.restricciones:
-            self.restricciones[nodo].append = ([gdl, valor])
-        
-        else:
-            self.restricciones[nodo] = [[gdl, valor]]
-        
-        return 0
-        
-        # if no_existe_restriccion_pal_nodo:
-        #     self.restricciones[nodo] = []
-            
-        # self.restricciones[nodo].append(gdl, valor)
-        
-        # return 0
 
     def agregar_fuerza(self, nodo, gdl, valor):
         
-               
-        if nodo in self.cargas:
-            self.cargas[nodo].append = ([gdl, valor])
+
+
+    def ensamblar_sistema(self,factor_peso_propio=0):
         
-        else:
-            self.cargas[nodo] = [[gdl, valor]]
-     
-        return 0
-
-        # if no_existe_fuerza_pal_nodo:
-        #     self.cargas[nodo] = []
-            
-        # self.cargas[nodo].append(gdl, valor)
         
-        # return 0
-
-
-    def ensamblar_sistema(self, factor_peso_propio=0.):
-        
-        """Implementar"""	
-        
-        return 0
 
 
 
-    def resolver_sistema(self):
-        
-        """Implementar"""	
-        
-        return 0
-
-    
-    #################################################
-    
-    
-    
     def obtener_desplazamiento_nodal(self, n):
+        if self.Ndimensiones == 2:
+            dofs = [2*n, 2*n+1]
+        elif self.Ndimensiones == 3:
+            dofs = [3*n, 3*n+1, 3*n+2]
         
-        """Implementar"""	
-        
-        return 0
-
+        return self.u[dofs]
 
     def obtener_fuerzas(self):
         
@@ -169,25 +129,40 @@ class Reticulado(object):
 
     def __str__(self):
         
-        barras = self.obtener_barras()
+        s="nodos: \n"
+        for i in range(self.Nnodos):
+            s+=f"\t {i}: ({self.xyz[i][0]} {self.xyz[i][1]} {self.xyz[i][2]}) \n"
+        s+="\n"
         
-        numero = 0
-        print ("barras :")
-        for k in barras :
-            
-            
-            print  (str(numero) + " : " + str(((k.ni,k.nj))))
-         
-            numero +=1
+        s+="barras: \n"
+        for i,j in enumerate(self.barras,start=0):
+            s+=f"\t {i}: [{j.ni} {j.nj}] \n"
+        s+="\n"
         
-        nodos = self.obtener_nodos()
-        numero = 0
-        k = 0
+        s+="restricciones: \n"
+        for i in self.restricciones:
+            s+=f"\t {i}: {self.restricciones[i]} \n"
+        s+="\n"
+        
+        s+="cargas: \n"
+        for i in self.cargas:
+            s+=f"\t {i}: {self.cargas[i]} \n"
+        s+="\n"
+        
+        s+="desplazamientos: \n"
+        i=0
+        j=0
+        while i < (len(self.u)):
+            s+=f"\t {j}: ({(self.u[i])}, {(self.u[i+1])}, {(self.u[i+2])}) \n"
+            i+=3
+            j+=1
+        s+="\n"
+        
+        s+="fuerzas: \n" 
+        for i,j in enumerate(self.barras,start=0):
+            s+=f"\t {i}: {j.obtener_fuerza(self)} \n"
+        s+="\n"
         
         
-        while k < len(self.xyz):
-            
-            print ("nodo" + str(numero) + " = " + str(nodos[numero]))
-            
-            k += 1
-            numero +=1
+        return s
+   

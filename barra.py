@@ -32,13 +32,11 @@ class Barra(object):
         xj = reticulado.xyz[nj,:]
         
         
-        #print (xi)
+        print (xi)
         
-        #print (f"Barra {ni} a {nj} xi = {xi} xj = {xj}")
+        print (f"Barra {ni} a {nj} xi = {xi} xj = {xj}")
         
-        dist_ij = np.linalg.norm(-xi + xj)
-        
-        return dist_ij
+       
 
     def calcular_peso(self, reticulado):
         """Devuelve el largo de la barra. 
@@ -75,7 +73,7 @@ class Barra(object):
         cosθy = Ly/L
         cosθz = Lz/L
         
-        T=np.array([-cosθx, -cosθy, -cosθz, cosθx, cosθy, cosθz])
+        T=np.array([[-cosθx, -cosθy, -cosθz, cosθx, cosθy, cosθz]])
         ke = self.seccion.area()*E_acero/L*(T.T@T)
         return ke
 
