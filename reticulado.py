@@ -281,28 +281,26 @@ class Reticulado(object):
         
         
         cargas = []
-        for n in self.cargas:
-            for carg in self.cargas[n]:
+        for nodo in self.cargas:
+            for carg in self.cargas[nodo]:
                 cargas.append([nodo,carg[0]])
         dataset["cargas"] = cargas
         
         
         cargas_val = []
-        for n in self.cargas:
-            for cargval in self.cargas[n]:
+        for nodo in self.cargas:
+            for cargval in self.cargas[nodo]:
                 cargas_val.append(cargval[1])
         dataset["cargas_val"] = cargas_val
         
         
         rests_val = []
-        for n in self.restricciones:
-            for rest in self.restricciones[n]:
+        for nodo in self.restricciones:
+            for rest in self.restricciones[nodo]:
                 rests_val.append(rest[1])       
         dataset["restricciones_val"] = rests_val
         
         return 0
-        
-
         
 
     def abrir(self, nombre):
