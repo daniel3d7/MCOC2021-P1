@@ -252,16 +252,106 @@ class Reticulado(object):
 
 
     def guardar(self, nombre):
+        import h5py    
+        
+        dataset = h5py.File(nombre, "w")   
+        dataset["xyz"] = self.xyz
+        
+        barras = np.zeros((len(self.barras),2), dtype= np.int32)
+        secciones = np.zeros((len(self.barras),), dtype= h5py.string_dtype())
+        restricciones = np.zeros((10,2), dtype= np.int32)
+        contador = 0
+        
+        for restriccion in (self.restricciones):
+            
+            for valor_restriccion in (self.restricciones[restriccion]):
+                
+                restricciones[contador,0] = restriccion
+                restricciones[contador,1] = valor_restriccion[0]
+                contador += 1
+        
+        for numero_barra,barra in enumerate(self.barras):
+            barras[numero_barra,0] = barra.ni
+            barras[numero_barra,1] = barra.nj
+            secciones[numero_barra] = barra.seccion.nombre()
 
-        """Implementar"""   
-
+        dataset["restricciones"] = restricciones
+        dataset["barras"] = barras
+        dataset["secciones"] = secciones
+        
+        
+        cargas = []
+        for n in self.cargas:
+            for carg in self.cargas[n]:
+                cargas.append([nodo,carg[0]])
+        dataset["cargas"] = cargas
+        
+        
+        cargas_val = []
+        for n in self.cargas:
+            for cargval in self.cargas[n]:
+                cargas_val.append(cargval[1])
+        dataset["cargas_val"] = cargas_val
+        
+        
+        rests_val = []
+        for n in self.restricciones:
+            for rest in self.restricciones[n]:
+                rests_val.append(rest[1])       
+        dataset["restricciones_val"] = rests_val
+        
         return 0
+        
+
+        
 
     def abrir(self, nombre):
+          import h5py
+          dataset = h5py.File(nombre, "r")
+          from barra import Barra
+          from secciones import SeccionICHA
+        
+      
+        
+          secciones_p6 = dataset["secciones"]
+          restricciones_p6 = dataset["restricciones"]
+          restricciones_val = dataset["restricciones_val"]
+          cargas_p6 = dataset["cargas"]
+          cargas_val = dataset["cargas_val"]
+          barras_p6 = dataset["barras"]
+          xyz_p6 = dataset["xyz"]
 
-        """Implementar"""   
 
-        return 0
+        
+        #Nodos 
+          for i in xyz_p6:
+              self.agregar_nodo(i[0], i[1], i[2])
+
+          
+        #Barras
+              o = 0
+          for i in barras_p6:
+              valor_iterado = dataset["secciones"][o]
+              self.agregar_barra(i[0],i[1], SeccionICHA(str(valor_iterado)))
+              o += 1
+  
+
+
+
+        #Cargas puntuales
+          m = 0 
+          for i in cargas_p6:
+              valor_iterado = cargas_val[m][0]
+              self.agregar_fuerza(int(i[0]),int(i[1]), double(valor_iterado))
+              m += 1
+
+        
+       #Restricciones
+          l=0
+          for i in restricciones_p6:           
+              valor_iterado=restricciones_val[l]
+              self.agregar_restriccion(int(i[0]),int(i[1]), double(valor_iterado))
+              l+=1
 
 
     def __str__(self):
