@@ -40,6 +40,7 @@ Por lo que nos dimos cuenta que habia que quitarle los parentesis () al area y p
 
 
 Al corrernos por primera vez, pesaba 420990.5991925834 kg.
+
 Esto se hizo con secciones H1100x350x400.4
 
 ![image](https://user-images.githubusercontent.com/88512479/135768832-5f0a8f6a-ccd7-4d7a-87c9-fb675462f5bd.png)
@@ -47,6 +48,7 @@ Esto se hizo con secciones H1100x350x400.4
 Con eso ya listo, nos dispusimos a bajar el peso del puente. Con esto, comenzamos a probar con distintas secciones que se aprecian en la foto. 
 
 Luego de hacer lo cambios, proseguimos con el segundo intento y llegamos al valor de 161578.90482444424 kg.
+
 Esto se hizo con secciones H800x350x148.2 y H1100x350x188.5
 
 ![image](https://user-images.githubusercontent.com/88512479/135768906-ce441e75-4bb0-4e64-b29f-ce24b7e61996.png)
@@ -54,6 +56,7 @@ Esto se hizo con secciones H800x350x148.2 y H1100x350x188.5
 Pero aun asi nos dispusimos a bajar mas el peso y seguimos modificando. 
 
 En el tercer intento llegamos al valor de 114936.27114383684 kg.
+
 Esto se hizo con secciones H300x200x103.2 y H800x350x148.2
 
 ![image](https://user-images.githubusercontent.com/88512479/135768963-2a2aacdd-0722-4958-8292-c9cf4b2e2fa2.png)
