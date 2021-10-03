@@ -82,6 +82,19 @@ Con estas modificaciones bajamos mucho el peso, llegando a 84033.14362704242 kg.
 
 ![image](https://user-images.githubusercontent.com/88512479/135769958-cbe48168-b3d3-40a8-a3ed-4b87bd864ac8.png)
 
+Seguimos modificando las barras hasta llegar a nuestro diseño final, con las siguientes barras. 
+
+![image](https://user-images.githubusercontent.com/88512479/135770135-d99fe2fa-0eba-487b-b929-c2a17da5fb3c.png)
+
+Con esas barras, llegamos al valor FINAL de 63928.63075902012 kg.
+
+![image](https://user-images.githubusercontent.com/88512479/135770156-3f6e9e51-51ba-4f08-ac8e-c272841a0842.png)
+
+Por lo que, nuestro diseño final consta de un valor total de 63928.63075902012 kg. 
+
+![image](https://user-images.githubusercontent.com/88512479/135770268-5017a1bb-4a6d-4104-bed7-0fee0085f983.png)
+
+
 
 
 
