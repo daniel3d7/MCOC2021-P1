@@ -99,7 +99,7 @@ Por lo que, nuestro diseño final consta de un valor total de 63928.63075902012 
 
 Como se puede apreciar en la imagen, nuestro diseño consta de uniones "piramidales" con nodos superiores en los vertices. Se usaron secciones de barra chica H30x150x36.7 , las de barra mediana fueron H500x300x88.2 , las de barra grande fueron H700x300x237.1 y por ultimo las secciones supergrandes fueron H800x350x148.2 
 
-El numero total de barras son 168 con 51 nodos. 
+El numero total de barras son 168 con 51 nodos
 
 
 
