@@ -31,14 +31,7 @@ Por lo que nos dimos cuenta que habia que quitarle los parentesis () al area y p
 
 Finalmente decidimos usar el codigo del profesor ya que nuestro codigo tenia muchos problemas que no pudimos solucionar. 
 
-Al codigo del profesor le añadimos nuestro codigo de calculos mostrados anteriormente. 
-.
-.
-.
-.
-
-
-
+Al codigo del profesor le añadimos nuestro codigo de calculos mostrados anteriormente. Con esto nos aparecieron unos errores que logramos arreglar y finalmente nos corrio bien el programa. 
 
 
 Al corrernos por primera vez, pesaba 420990.5991925834 kg.
@@ -101,7 +94,7 @@ Como se puede apreciar en la imagen, nuestro diseño consta de uniones "piramida
 
 El numero total de barras son 168 con 51 nodos
 
-
+Respecto al factor de utilizacion los primeros intentos el factor de utilizacion superaba el valor de 1, por lo que el reticulado no cumplia con los requisitos minimos. Mientras que a medida que fuimos aumetando el tamaño de la seccion, los factores de utilizacion llegaron a ser menores que 1, por lo que se convirtio en un reticulado factible que si cumplia, el cual se puede apreciar en la imagen. 
 
 
 
