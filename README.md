@@ -7,7 +7,8 @@ Informe Entrega 7
 Al comenzar, partimos con nuestro codigo de la entrega pasada y proseguimos a rellenar "05_ejemplo_chequear_diseño.py", y logramos agregar todos los nodos y barras.
 A continuación, se veran las imagenes de los calculos. 
 
-![image](https://user-images.githubusercontent.com/88512479/135766467-606a87c3-38bb-4e33-9e24-d8f0c1ff3971.png)
+![image](https://user-images.githubusercontent.com/88512479/135770874-1a92fb11-8f42-4439-91c1-5f20b2efd164.png)
+(Finalmente no se utilizaron columnas)
 ![image](https://user-images.githubusercontent.com/88512479/135766485-c4d1e06f-9455-4f9c-a367-31bd6b287fd3.png)
 ![image](https://user-images.githubusercontent.com/88512479/135766512-4ef5a618-247d-48fc-9443-8edaf321733a.png)
 ![image](https://user-images.githubusercontent.com/88512479/135766529-5bc5abdf-72bb-4bf9-8f62-28d4f8106938.png)
