@@ -11,7 +11,7 @@ A continuación, se veran las imagenes de los calculos.
 (Finalmente no se utilizaron columnas)
 ![image](https://user-images.githubusercontent.com/88512479/135766485-c4d1e06f-9455-4f9c-a367-31bd6b287fd3.png)
 ![image](https://user-images.githubusercontent.com/88512479/135766512-4ef5a618-247d-48fc-9443-8edaf321733a.png)
-![image](https://user-images.githubusercontent.com/88512479/135766529-5bc5abdf-72bb-4bf9-8f62-28d4f8106938.png)
+
 
 Luego tuvimos varios errores, como por ejemplo este en "reticulados.py" que tenia un error en perfiles. 
 
