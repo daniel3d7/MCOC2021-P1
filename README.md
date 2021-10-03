@@ -89,7 +89,20 @@ Con esas barras, llegamos al valor FINAL de 63928.63075902012 kg.
 
 Por lo que, nuestro diseño final consta de un valor total de 63928.63075902012 kg. 
 
+FACTOR DE UTILIZACION
 ![image](https://user-images.githubusercontent.com/88512479/135770268-5017a1bb-4a6d-4104-bed7-0fee0085f983.png)
+
+
+VISTA HORIZONTAL
+![7aaca5f2-d250-48cb-9c94-864fa82e57c7](https://user-images.githubusercontent.com/88356329/135771099-5465cf25-3406-4ca8-bc9c-8f82bcbbbeef.jpg)
+
+
+VISTA LATERAL IZQ
+![9d96b131-90b3-431c-8bfe-dbc5c53b73c3](https://user-images.githubusercontent.com/88356329/135771103-049c4a4a-a26f-4dfa-9ade-32faa86ca97b.jpg)
+
+
+VISTA PARTE INFERIOR
+![bf4c86a3-8731-411c-b54e-2c83cea4e581](https://user-images.githubusercontent.com/88356329/135771107-ba1ca7d8-c35a-4be4-82a5-9040413eb433.jpg)
 
 Como se puede apreciar en la imagen, nuestro diseño consta de uniones "piramidales" con nodos superiores en los vertices. Se usaron secciones de barra chica H30x150x36.7 , las de barra mediana fueron H500x300x88.2 , las de barra grande fueron H700x300x237.1 y por ultimo las secciones supergrandes fueron H800x350x148.2 
 
