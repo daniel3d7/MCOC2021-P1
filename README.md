@@ -28,7 +28,10 @@ Lo arreglamos introduciendo "float" en Area y Peso. Pero nos seguia apareciendo 
 
 Por lo que nos dimos cuenta que habia que quitarle los parentesis () al area y peso. 
 
-.
+
+Finalmente decidimos usar el codigo del profesor ya que nuestro codigo tenia muchos problemas que no pudimos solucionar. 
+
+Al codigo del profesor le añadimos nuestro codigo de calculos mostrados anteriormente. 
 .
 .
 .
@@ -94,7 +97,9 @@ Por lo que, nuestro diseño final consta de un valor total de 63928.63075902012 
 
 ![image](https://user-images.githubusercontent.com/88512479/135770268-5017a1bb-4a6d-4104-bed7-0fee0085f983.png)
 
+Como se puede apreciar en la imagen, nuestro diseño consta de uniones "piramidales" con nodos superiores en los vertices. Se usaron secciones de barra chica H30x150x36.7 , las de barra mediana fueron H500x300x88.2 , las de barra grande fueron H700x300x237.1 y por ultimo las secciones supergrandes fueron H800x350x148.2 
 
+El numero total de barras son 168 con 51 nodos. 
 
 
 
